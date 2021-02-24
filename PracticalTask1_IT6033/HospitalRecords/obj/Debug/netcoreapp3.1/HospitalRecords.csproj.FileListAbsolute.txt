@@ -11,3 +11,16 @@ C:\Users\Nick\OneDrive\Desktop\Class\Algorithms\PracticalTask1\PracticalTask1_IT
 C:\Users\Nick\OneDrive\Desktop\Class\Algorithms\PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.dll
 C:\Users\Nick\OneDrive\Desktop\Class\Algorithms\PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.pdb
 C:\Users\Nick\OneDrive\Desktop\Class\Algorithms\PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.genruntimeconfig.cache
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.csprojAssemblyReference.cache
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.AssemblyInfo.cs
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.exe
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.deps.json
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.runtimeconfig.json
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.runtimeconfig.dev.json
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.dll
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\bin\Debug\netcoreapp3.1\HospitalRecords.pdb
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.dll
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.pdb
+C:\Users\User\source\repos\HospitalRecords-PracticalTask1\PracticalTask1_IT6033\HospitalRecords\obj\Debug\netcoreapp3.1\HospitalRecords.genruntimeconfig.cache

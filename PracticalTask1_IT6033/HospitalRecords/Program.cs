@@ -15,7 +15,7 @@ namespace Hospital
         {
             List<Patient> RecordsList = new List<Patient>();
             //Use path to the ListOfPatients.txt here
-            String path = "C:/Users/Nick/OneDrive/Desktop/Class/Algorithms/PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
+            String path = "C:/Users/User/source/repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
             //an array to store info about one patient
             String[] oneRecord = new String[4];
             //an array to store info about one patient

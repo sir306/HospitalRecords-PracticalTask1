@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {}
+    "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {
+    "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
         "projectName": "HospitalRecords",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

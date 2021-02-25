@@ -12,6 +12,12 @@ namespace Hospital
             //initiate obtain records from file
             ObtainRecords();
             Console.WriteLine();
+            PerformSearchExitRequest();
+                
+        }
+        // Method to output to the console a search or exit request and respond in the appropriate manner
+        public static void PerformSearchExitRequest()
+        {
             while (true)
             {
                 Console.WriteLine("Press S for search, Press E for exit");
@@ -28,17 +34,15 @@ namespace Hospital
                     Console.WriteLine();
                     string enteredID = Console.ReadLine();
                     Console.WriteLine(enteredID);
-                    searchRecords("s");
+                    searchRecords(enteredID);
                     break;
                 }
                 Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
                 Console.WriteLine();
             }
-                
         }
         public static void ObtainRecords()
-        {
-            
+        {   
             //Use path to the ListOfPatients.txt here
             String path = "C:/Users/User/source/repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
             //an array to store info about one patient
@@ -88,12 +92,21 @@ namespace Hospital
             }
             
         }
+        // Initiate record search with input id
         public static void searchRecords(string patientID)
         {
-            foreach (object item in RecordsList)
+            var i = 0;
+            foreach (var item in RecordsList)
             {
-                Console.WriteLine("hello");
+                Console.WriteLine("hello im in search records");
+                if (item.patientID == patientID)
+                {
+                    Console.WriteLine("match");
+                    Console.WriteLine("{0} many iterations", i);
+                    //Patient.writePatientFile(item);
+                }
             }
+            PerformSearchExitRequest();
         }
         class Patient
         {

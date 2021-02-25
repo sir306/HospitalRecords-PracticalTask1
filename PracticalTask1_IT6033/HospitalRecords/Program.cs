@@ -8,8 +8,14 @@ namespace Hospital
     {
         public static void Main()
         {
+            //initiate obtain records from file
             ObtainRecords();
-            
+            Console.WriteLine("Press S for search, Press E for exit");
+            do
+            {
+                Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
+            } while (Console.ReadKey().Key != ConsoleKey.S || Console.ReadKey().Key != ConsoleKey.E);
+                Console.ReadKey();
         }
         public static void ObtainRecords()
         {
@@ -57,6 +63,8 @@ namespace Hospital
                     }
                     file.Close();
                     Console.WriteLine($"File has {counter} lines.");
+                    //displays message after completion of read line method
+                    Console.WriteLine("**Patient records have been recorded successfully**");
                 }
             }
             

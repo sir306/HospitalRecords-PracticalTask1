@@ -6,20 +6,39 @@ namespace Hospital
 {
     public class Records
     {
+        static List<Patient> RecordsList = new List<Patient>();
         public static void Main()
         {
             //initiate obtain records from file
             ObtainRecords();
-            Console.WriteLine("Press S for search, Press E for exit");
-            do
+            Console.WriteLine();
+            while (true)
             {
+                Console.WriteLine("Press S for search, Press E for exit");
+                ConsoleKeyInfo keyPressed = Console.ReadKey();
+                Console.WriteLine();
+                if (keyPressed.KeyChar == 'e' || keyPressed.KeyChar == 'E')
+                {
+                    Console.WriteLine("Key pressed was E");
+                    break;
+                }
+                else if (keyPressed.KeyChar == 's' || keyPressed.KeyChar == 'S')
+                {
+                    Console.WriteLine("Enter Patient ID to search and then press enter");
+                    Console.WriteLine();
+                    string enteredID = Console.ReadLine();
+                    Console.WriteLine(enteredID);
+                    searchRecords("s");
+                    break;
+                }
                 Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
-            } while (Console.ReadKey().Key != ConsoleKey.S || Console.ReadKey().Key != ConsoleKey.E);
-                Console.ReadKey();
+                Console.WriteLine();
+            }
+                
         }
         public static void ObtainRecords()
         {
-            List<Patient> RecordsList = new List<Patient>();
+            
             //Use path to the ListOfPatients.txt here
             String path = "C:/Users/User/source/repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
             //an array to store info about one patient
@@ -69,7 +88,13 @@ namespace Hospital
             }
             
         }
-        //push test edit
+        public static void searchRecords(string patientID)
+        {
+            foreach (object item in RecordsList)
+            {
+                Console.WriteLine("hello");
+            }
+        }
         class Patient
         {
             public string patientID;

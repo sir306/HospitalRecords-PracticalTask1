@@ -13,7 +13,7 @@ namespace Hospital
             ObtainRecords();
             Console.WriteLine();
             PerformSearchExitRequest();
-                
+
         }
         // Method to output to the console a search or exit request and respond in the appropriate manner
         public static void PerformSearchExitRequest()
@@ -33,18 +33,16 @@ namespace Hospital
                     Console.WriteLine("Enter Patient ID to search and then press enter");
                     Console.WriteLine();
                     string enteredID = Console.ReadLine();
-                    Console.WriteLine(enteredID);
-                    searchRecords(enteredID);
-                    break;
+                    SearchRecords(enteredID);
                 }
                 Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
                 Console.WriteLine();
             }
         }
         public static void ObtainRecords()
-        {   
+        {
             //Use path to the ListOfPatients.txt here
-            String path = "C:/Users/User/source/repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
+            String path = "C:/Users/Nick/Source/Repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
             //an array to store info about one patient
             String[] oneRecord = new String[4];
             //an array to store info about one patient
@@ -79,8 +77,8 @@ namespace Hospital
                         //Console.WriteLine(RecordsList[counter].name.ToString());
                         //Console.WriteLine(RecordsList[counter].checkInDate.ToString());
                         //Console.WriteLine(RecordsList[counter].assignedPersonnel.ToString());
-                        
-                        Patient.writePatientFile(RecordsList);
+
+                        Patient.writePatientFile(RecordsList, counter);
 
                         counter++;
                     }
@@ -90,21 +88,54 @@ namespace Hospital
                     Console.WriteLine("**Patient records have been recorded successfully**");
                 }
             }
-            
+
         }
         // Initiate record search with input id
-        public static void searchRecords(string patientID)
+        public static void SearchRecords(string patientID)
         {
             var i = 0;
             foreach (var item in RecordsList)
             {
-                Console.WriteLine("hello im in search records");
+                Console.WriteLine("searching records");
+                Console.WriteLine();
                 if (item.patientID == patientID)
                 {
                     Console.WriteLine("match");
                     Console.WriteLine("{0} many iterations", i);
-                    //Patient.writePatientFile(item);
+                    Patient.writePatientFile(RecordsList, i);
+                    Console.WriteLine();
+                    //perform delete request
+                    Console.WriteLine("Would you like to remove the patient's record(s)?");
+                    Console.WriteLine("Y or N?");
+                    ConsoleKeyInfo key;
+                    key = Console.ReadKey();
+                    do
+                    {
+                        if (key.Key == ConsoleKey.Y)
+                        {
+                            Console.WriteLine("performing delete");
+
+                        }
+                        else if (key.Key == ConsoleKey.N)
+                        {
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid key pressed");
+                            Console.WriteLine("Press Y or N");
+                        }
+                    } while (key.Key != ConsoleKey.Y || key.Key != ConsoleKey.N);
+                    
+                    //minus 1 from counter so smaller than list length for next step
+                    i--;
                 }
+                i++;
+            }
+            int len = RecordsList.Count;
+            if (i == len)
+            {
+                Console.WriteLine("Patient ID does not exist");
             }
             PerformSearchExitRequest();
         }
@@ -114,7 +145,7 @@ namespace Hospital
             public string name;
             public string checkInDate;
             public string assignedPersonnel;
-            
+
             public Patient(string patientID, string name, string checkInDate, string assignedPersonnel)
             {
                 this.patientID = patientID;
@@ -124,12 +155,12 @@ namespace Hospital
             }
 
             //method to write patient files
-            public static void writePatientFile(List<Patient> info)
+            public static void writePatientFile(List<Patient> info, int listPos)
             {
-                var patientID = info[0].patientID.ToString();
-                var name = info[0].name.ToString();
-                var checkInDate = info[0].checkInDate.ToString();
-                var assignedPersonnel = info[0].assignedPersonnel.ToString();
+                var patientID = info[listPos].patientID.ToString();
+                var name = info[listPos].name.ToString();
+                var checkInDate = info[listPos].checkInDate.ToString();
+                var assignedPersonnel = info[listPos].assignedPersonnel.ToString();
 
                 Console.WriteLine("Patient ID: {0}", patientID);
                 Console.WriteLine("Name: {0}", name);

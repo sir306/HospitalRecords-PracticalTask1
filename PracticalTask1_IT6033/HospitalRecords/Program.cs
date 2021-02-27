@@ -18,15 +18,16 @@ namespace Hospital
         // Method to output to the console a search or exit request and respond in the appropriate manner
         public static void PerformSearchExitRequest()
         {
-            while (true)
+            bool exit = true;
+            do
             {
                 Console.WriteLine("Press S for search, Press E for exit");
                 ConsoleKeyInfo keyPressed = Console.ReadKey();
                 Console.WriteLine();
                 if (keyPressed.KeyChar == 'e' || keyPressed.KeyChar == 'E')
                 {
-                    Console.WriteLine("Key pressed was E");
-                    break;
+                    //Console.WriteLine("Key pressed was E");
+                    exit = false;
                 }
                 else if (keyPressed.KeyChar == 's' || keyPressed.KeyChar == 'S')
                 {
@@ -35,9 +36,12 @@ namespace Hospital
                     string enteredID = Console.ReadLine();
                     SearchRecords(enteredID);
                 }
-                Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
-                Console.WriteLine();
-            }
+                else
+                {
+                    Console.WriteLine("Incorrect Key, Press S for search, Press E for exit");
+                    Console.WriteLine();
+                }
+            } while (exit);
         }
         public static void ObtainRecords()
         {
@@ -105,30 +109,10 @@ namespace Hospital
                     Patient.writePatientFile(RecordsList, i);
                     Console.WriteLine();
                     //perform delete request
-                    Console.WriteLine("Would you like to remove the patient's record(s)?");
-                    Console.WriteLine("Y or N?");
-                    ConsoleKeyInfo key;
-                    key = Console.ReadKey();
-                    do
-                    {
-                        if (key.Key == ConsoleKey.Y)
-                        {
-                            Console.WriteLine("performing delete");
-
-                        }
-                        else if (key.Key == ConsoleKey.N)
-                        {
-
-                        }
-                        else
-                        {
-                            Console.WriteLine("Invalid key pressed");
-                            Console.WriteLine("Press Y or N");
-                        }
-                    } while (key.Key != ConsoleKey.Y || key.Key != ConsoleKey.N);
-                    
+                    DeleteFile(RecordsList, i);
                     //minus 1 from counter so smaller than list length for next step
                     i--;
+                    break;
                 }
                 i++;
             }
@@ -137,8 +121,34 @@ namespace Hospital
             {
                 Console.WriteLine("Patient ID does not exist");
             }
-            PerformSearchExitRequest();
         }
+
+        static void DeleteFile(List<Patient> patList, int listPos)
+        {
+            while (true)
+            {
+                Console.WriteLine("Would you like to remove the patient's record(s)?");
+                Console.WriteLine("Y or N?");
+                ConsoleKeyInfo key;
+                key = Console.ReadKey();
+                Console.WriteLine();
+                if (key.Key == ConsoleKey.Y)
+                {
+                    Console.WriteLine("performing delete");
+                    patList.RemoveAt(listPos);
+                    Console.WriteLine(RecordsList.Count);
+                    break;
+                }
+                else if (key.Key == ConsoleKey.N)
+                {
+                    Console.WriteLine("Not deleting file");
+                    break;
+                }
+                Console.WriteLine("Invalid key pressed");
+                Console.WriteLine("Y or N?");
+            }
+        }
+
         class Patient
         {
             public string patientID;

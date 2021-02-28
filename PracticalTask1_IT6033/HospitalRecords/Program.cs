@@ -6,7 +6,7 @@ namespace Hospital
 {
     public class Records
     {
-        static List<Patient> RecordsList = new List<Patient>();
+        static readonly List<Patient> RecordsList = new List<Patient>();
         public static void Main()
         {
             //initiate obtain records from file
@@ -46,7 +46,7 @@ namespace Hospital
         public static void ObtainRecords()
         {
             //Use path to the ListOfPatients.txt here
-            String path = "C:/Users/Nick/Source/Repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
+            String path = "C:/Users/User/source/repos/HospitalRecords-PracticalTask1/PracticalTask1_IT6033/HospitalRecords/ListOfPatients.txt";
             //an array to store info about one patient
             String[] oneRecord = new String[4];
             //an array to store info about one patient
@@ -82,7 +82,7 @@ namespace Hospital
                         //Console.WriteLine(RecordsList[counter].checkInDate.ToString());
                         //Console.WriteLine(RecordsList[counter].assignedPersonnel.ToString());
 
-                        Patient.writePatientFile(RecordsList, counter);
+                        //Patient.writePatientFile(RecordsList, counter);
 
                         counter++;
                     }
@@ -100,13 +100,14 @@ namespace Hospital
             var i = 0;
             foreach (var item in RecordsList)
             {
-                Console.WriteLine("searching records");
+                Console.WriteLine("Searching Records");
                 Console.WriteLine();
                 if (item.patientID == patientID)
                 {
-                    Console.WriteLine("match");
-                    Console.WriteLine("{0} many iterations", i);
-                    Patient.writePatientFile(RecordsList, i);
+                    //how many iterations are done when a match is found
+                    //Console.WriteLine("Match");
+                    //Console.WriteLine("{0} many iterations", i);
+                    Patient.WritePatientFile(RecordsList, i);
                     Console.WriteLine();
                     //perform delete request
                     DeleteFile(RecordsList, i);
@@ -134,7 +135,7 @@ namespace Hospital
                 Console.WriteLine();
                 if (key.Key == ConsoleKey.Y)
                 {
-                    Console.WriteLine("performing delete");
+                    Console.WriteLine("Deleting file");
                     patList.RemoveAt(listPos);
                     Console.WriteLine(RecordsList.Count);
                     break;
@@ -165,7 +166,7 @@ namespace Hospital
             }
 
             //method to write patient files
-            public static void writePatientFile(List<Patient> info, int listPos)
+            public static void WritePatientFile(List<Patient> info, int listPos)
             {
                 var patientID = info[listPos].patientID.ToString();
                 var name = info[listPos].name.ToString();
@@ -175,7 +176,7 @@ namespace Hospital
                 Console.WriteLine("Patient ID: {0}", patientID);
                 Console.WriteLine("Name: {0}", name);
                 Console.WriteLine("Check In Date: {0}", checkInDate);
-                Console.WriteLine("Assigned Personnel: {0}", assignedPersonnel);
+                Console.WriteLine("Assigned Medical Personnel: {0}", assignedPersonnel);
                 Console.WriteLine("");
             }
         }

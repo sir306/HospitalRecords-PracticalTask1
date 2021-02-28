@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nick\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {}
+    "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nick\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {
+    "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nick\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
         "projectName": "HospitalRecords",
-        "projectPath": "C:\\Users\\Nick\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nick\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\HospitalRecords.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\HospitalRecords-PracticalTask1\\PracticalTask1_IT6033\\HospitalRecords\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
